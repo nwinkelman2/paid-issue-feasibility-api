@@ -9,6 +9,12 @@ Turn a public paid software issue into a deterministic feasibility brief before 
 
 After Stripe confirms the subscription, checkout redirects to the one-time key claim page. Save the key then; plaintext keys are not retained for later display.
 
+## Built for paid-issue decisions
+
+Use it before accepting a software bounty, quoting a fixed-price issue, or assigning an unfamiliar ticket. It turns the same public issue text your team already reads into a repeatable first-pass brief, so senior engineering attention can stay on the candidates most likely to be worth a deeper review.
+
+It is useful for independent developers, bounty teams, engineering leads, and developer-relations programs triaging public GitHub issues. The score is evidence-backed decision support—not a replacement for repository inspection or a guarantee of an award.
+
 ## Request
 
 ```bash
@@ -56,5 +62,9 @@ curl --request POST 'https://travis-commercial-api.noah-winkelman2.workers.dev/v
 | `competitor_count` | integer | 0–1,000,000; optional |
 
 The analysis uses only the submitted public issue text, makes no provider calls, and does not retain customer input. It is decision support, not a promise that a bounty will be won or paid.
+
+## Try one issue in under a minute
+
+Subscribe, claim the one-time API key, and send the issue title, description, reward, and visible competitor count with the request above. A successful response includes the score components and the evidence used to derive them, making the recommendation auditable instead of opaque.
 
 [Machine-readable catalog](https://travis-commercial-api.noah-winkelman2.workers.dev/v1/commercial-api/catalog) · [Key claim endpoint](https://travis-commercial-api.noah-winkelman2.workers.dev/v1/commercial-api/claim)
